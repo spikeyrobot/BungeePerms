@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry kind="lib" path="lib/repository/com/mojang/AccountsClient/0.0.1-SNAPSHOT/AccountsClient-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="E:/Users/Campbell/BukkitPlugins/BungeeUtilisals/dist/BungeeCord.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
