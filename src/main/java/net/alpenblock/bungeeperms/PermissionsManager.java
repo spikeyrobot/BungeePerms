@@ -466,7 +466,11 @@ public class PermissionsManager
         userlock.readLock().lock();
         for (User u : users)
         {
-            if (u.getName().equalsIgnoreCase(usernameoruuid))
+    		if(u.getName() == null) {
+    			BungeePerms.getLogger().warning("u.getName()=null");
+    			continue;
+    		}
+        	if (u.getName().equalsIgnoreCase(usernameoruuid))
             {
                 userlock.readLock().unlock();
                 return u;

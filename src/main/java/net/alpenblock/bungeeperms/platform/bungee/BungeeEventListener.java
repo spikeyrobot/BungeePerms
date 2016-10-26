@@ -116,12 +116,36 @@ public class BungeeEventListener implements Listener, EventListener
     public void onPermissionCheck(PermissionCheckEvent e)
     {
         CommandSender s = e.getSender();
-        try
-        {
-        	e.setHasPermission(BungeePerms.getInstance().getPermissionsChecker().hasPermOrConsoleOnServerInWorld(new BungeeSender(s), e.getPermission()));
-        } catch (NullPointerException e1) {
-        	
+        /*try {
+        	BungeePerms.getInstance().getPermissionsChecker().hasPermOrConsoleOnServerInWorld(new BungeeSender(s), e.getPermission());
+        	BungeePerms.getLogger().info("onPermissionCheck NullPointerException unthrown (err: 0)");
+        } catch (NullPointerException e0) {
+        	BungeePerms.getLogger().warning("onPermissionCheck NullPointerException suppressed (err: 0)");
         }
+        try {
+        	BungeePerms.getInstance().getPermissionsChecker();
+        	BungeePerms.getLogger().info("onPermissionCheck NullPointerException unthrown (err: 1)");
+        } catch (NullPointerException e1) {
+        	BungeePerms.getLogger().warning("onPermissionCheck NullPointerException suppressed (err: 1)");
+        }
+        try {
+        	new BungeeSender(s);
+        	BungeePerms.getLogger().info("onPermissionCheck NullPointerException unthrown (err: 2)");
+        } catch (NullPointerException e2) {
+        	BungeePerms.getLogger().warning("onPermissionCheck NullPointerException suppressed (err: 2)");
+        }
+        try {
+    		e.getPermission();
+        	BungeePerms.getLogger().info("onPermissionCheck NullPointerException unthrown (err: 3)");
+    	} catch (NullPointerException e3) {
+        	BungeePerms.getLogger().warning("onPermissionCheck NullPointerException suppressed (err: 3)");
+    	}*/
+        
+        //try {
+        	e.setHasPermission(BungeePerms.getInstance().getPermissionsChecker().hasPermOrConsoleOnServerInWorld(new BungeeSender(s), e.getPermission()));
+        //} catch (NullPointerException e1) {
+        //	BungeePerms.getLogger().warning("onPermissionCheck NullPointerException suppressed (err: 4)");
+        //}
     }
 
     @EventHandler
